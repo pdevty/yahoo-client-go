@@ -767,7 +767,7 @@ func (c *Client) ReviewSearch(param *ReviewSearchParam) (*ReviewSearchResultSet,
 		v.Set("sort", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/reviewSearch").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/reviewSearch").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
@@ -801,7 +801,7 @@ func (c *Client) ShopCampaignSearch(param *ShopCampaignSearchParam) (*ShopCampai
 		v.Set("callback", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/shopCampaignSearch").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/shopCampaignSearch").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
@@ -841,7 +841,7 @@ func (c *Client) GetModule(param *GetModuleParam) (*GetModuleResultSet, error) {
 		v.Set("position", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/getModule").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/getModule").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
@@ -887,7 +887,7 @@ func (c *Client) QueryRanking(param *QueryRankingParam) (*QueryRankingResultSet,
 		v.Set("category_id", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/queryRanking").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/queryRanking").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
@@ -933,7 +933,7 @@ func (c *Client) ItemLookup(param *ItemLookupParam) (*ItemLookupResultSet, error
 		v.Set("license", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/itemLookup").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/itemLookup").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
@@ -973,7 +973,7 @@ func (c *Client) CategorySearch(param *CategorySearchParam) (*CategorySearchResu
 		v.Set("category_id", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/categorySearch").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/categorySearch").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
@@ -1028,7 +1028,7 @@ func (c *Client) CategoryRanking(param *CategoryRankingParam) (*CategoryRankingR
 		v.Set("type", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/categoryRanking").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/categoryRanking").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
@@ -1164,7 +1164,7 @@ func (c *Client) ItemSearch(param *ItemSearchParam) (*ItemSearchResultSet, error
 		v.Set("seller", p)
 	}
 
-	url := fmt.Sprintf("%s?%s", c.urlFor("/V1/itemSearch").String(), v.Encode())
+	url := fmt.Sprintf("%s?%s", c.urlFor("/ShoppingWebService/V1/itemSearch").String(), v.Encode())
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err

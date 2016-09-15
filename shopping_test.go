@@ -9,8 +9,8 @@ import (
 
 func TestReviewSearch(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/reviewSearch" {
-			t.Error("request URL should be /V1/reviewSearch but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/reviewSearch" {
+			t.Error("request URL should be /ShoppingWebService/V1/reviewSearch but :", p)
 		}
 
 		query := req.URL.Query()
@@ -107,8 +107,8 @@ func TestReviewSearch(t *testing.T) {
 
 func TestShopCampaignSearch(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/shopCampaignSearch" {
-			t.Error("request URL should be /V1/shopCampaignSearch but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/shopCampaignSearch" {
+			t.Error("request URL should be /ShoppingWebService/V1/shopCampaignSearch but :", p)
 		}
 
 		query := req.URL.Query()
@@ -170,8 +170,8 @@ func TestShopCampaignSearch(t *testing.T) {
 
 func TestGetModule(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/getModule" {
-			t.Error("request URL should be /V1/getModule but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/getModule" {
+			t.Error("request URL should be /ShoppingWebService/V1/getModule but :", p)
 		}
 
 		query := req.URL.Query()
@@ -226,8 +226,8 @@ func TestGetModule(t *testing.T) {
 
 func TestQueryRanking(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/queryRanking" {
-			t.Error("request URL should be /V1/queryRanking but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/queryRanking" {
+			t.Error("request URL should be /ShoppingWebService/V1/queryRanking but :", p)
 		}
 
 		query := req.URL.Query()
@@ -296,8 +296,8 @@ func TestQueryRanking(t *testing.T) {
 
 func TestItemLookup(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/itemLookup" {
-			t.Error("request URL should be /V1/itemLookup but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/itemLookup" {
+			t.Error("request URL should be /ShoppingWebService/V1/itemLookup but :", p)
 		}
 
 		query := req.URL.Query()
@@ -387,8 +387,8 @@ func TestItemLookup(t *testing.T) {
 
 func TestCategorySearch(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/categorySearch" {
-			t.Error("request URL should be /V1/categorySearch but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/categorySearch" {
+			t.Error("request URL should be /ShoppingWebService/V1/categorySearch but :", p)
 		}
 
 		query := req.URL.Query()
@@ -452,8 +452,8 @@ func TestCategorySearch(t *testing.T) {
 
 func TestCategoryRanking(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/categoryRanking" {
-			t.Error("request URL should be /V1/categoryRanking but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/categoryRanking" {
+			t.Error("request URL should be /ShoppingWebService/V1/categoryRanking but :", p)
 		}
 
 		query := req.URL.Query()
@@ -550,8 +550,8 @@ func TestCategoryRanking(t *testing.T) {
 
 func TestItemSearchPriceranges(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/itemSearch" {
-			t.Error("request URL should be /V1/itemSearch but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/itemSearch" {
+			t.Error("request URL should be /ShoppingWebService/V1/itemSearch but :", p)
 		}
 
 		query := req.URL.Query()
@@ -774,8 +774,8 @@ func TestItemSearchPriceranges(t *testing.T) {
 
 func TestItemSearchSubcategories(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-		if p := req.URL.Path; p != "/V1/itemSearch" {
-			t.Error("request URL should be /V1/itemSearch but :", p)
+		if p := req.URL.Path; p != "/ShoppingWebService/V1/itemSearch" {
+			t.Error("request URL should be /ShoppingWebService/V1/itemSearch but :", p)
 		}
 
 		query := req.URL.Query()

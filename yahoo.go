@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	defaultBaseURL    = "http://shopping.yahooapis.jp/ShoppingWebService"
+	defaultBaseURL    = "http://shopping.yahooapis.jp"
 	defaultUserAgent  = "Yahoo AppID: "
 	apiRequestTimeout = 30 * time.Second
 )
