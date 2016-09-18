@@ -21,9 +21,9 @@ import yahoo "github.com/pdevty/yahoo-client-go"
 ```
 
 ```go
-client := yahoo.NewClient("<put your appid>")
+shopping := yahoo.NewShopping("<put your appid>")
 
-resultset, _ := client.ItemSearch(&yahoo.ItemSearchParam{
+resultset, _ := shopping.ItemSearch(&yahoo.ItemSearchParam{
 	Query: "vaio",
 })
 
@@ -33,14 +33,34 @@ for _, v := range resultset.Result.Hit {
 ```
 
 ```go
-res, err := client.ItemSearch(&yahoo.ItemSearchParam{})
-res, err := client.CategoryRanking(&yahoo.CategoryRankingParam{})
-res, err := client.CategorySearch(&yahoo.CategorySearchParam{})
-res, err := client.ItemLookup(&yahoo.ItemLookupParam{})
-res, err := client.QueryRanking(&yahoo.QueryRankingParam{})
-res, err := client.GetModule(&yahoo.GetModuleParam{})
-res, err := client.ShopCampaignSearch(&yahoo.ShopCampaignSearchParam{})
-res, err := client.ReviewSearch(&yahoo.ReviewSearchParam{})
+auction := yahoo.NewAuction("<put your appid>")
+
+resultset, _ := auction.CategoryLeaf(&yahoo.CategoryLeafParam{
+	Category: "2084193603",
+})
+
+for _, v := range resultset.Result.Item {
+	fmt.Println(v.Seller.ID)
+}
+```
+
+```go
+# shopping
+shopping.ItemSearch(&yahoo.ItemSearchParam{})
+shopping.CategoryRanking(&yahoo.CategoryRankingParam{})
+shopping.CategorySearch(&yahoo.CategorySearchParam{})
+shopping.ItemLookup(&yahoo.ItemLookupParam{})
+shopping.QueryRanking(&yahoo.QueryRankingParam{})
+shopping.GetModule(&yahoo.GetModuleParam{})
+shopping.ShopCampaignSearch(&yahoo.ShopCampaignSearchParam{})
+shopping.ReviewSearch(&yahoo.ReviewSearchParam{})
+
+# auction
+auction.CategoryTree(&yahoo.CategoryTreeParam{{})
+auction.CategoryLeaf(&yahoo.CategoryLeafParam{})
+auction.SellingList(&yahoo.SellingListParam{})
+auction.Search(&yahoo.SearchParam{})
+auction.AuctionItem(&yahoo.AuctionItemParam{})
 ```
 
 ## Contributing

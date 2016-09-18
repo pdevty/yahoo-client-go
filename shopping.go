@@ -56,8 +56,10 @@ type Point struct {
 
 // Shipping shipping information
 type Shipping struct {
-	Code string `xml:",omitempty"`
-	Name string `xml:",omitempty"`
+	Code                         string `xml:",omitempty"`
+	Name                         string `xml:",omitempty"`
+	TotalShippingMethodAvailable string `xml:"totalShippingMethodAvailable,attr,omitempty"`
+	Method                       Method `xml:",omitempty"`
 }
 
 // Title title information
@@ -104,10 +106,21 @@ type Brand struct {
 	ID string `xml:"Id,omitempty"`
 }
 
+// LongDistanceShipping longDistanceShipping information
+type LongDistanceShipping struct {
+	HokkaidoPrice       string `xml:",omitempty"`
+	OkinawaPrice        string `xml:",omitempty"`
+	IsolatedIslandPrice string `xml:",omitempty"`
+}
+
 // Method method information
 type Method struct {
-	Code string `xml:",omitempty"`
-	Name string `xml:",omitempty"`
+	Code                 string               `xml:",omitempty"`
+	Name                 string               `xml:",omitempty"`
+	NameRaw              string               `xml:",omitempty"`
+	SinglePrice          string               `xml:",omitempty"`
+	LongDistanceShipping LongDistanceShipping `xml:",omitempty"`
+	PriceURL             string               `xml:",omitempty"`
 }
 
 // Ratings ratings information

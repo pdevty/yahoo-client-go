@@ -10,7 +10,8 @@ import (
 )
 
 const (
-	defaultBaseURL    = "http://shopping.yahooapis.jp"
+	shoppingBaseURL   = "http://shopping.yahooapis.jp"
+	auctionBaseURL    = "http://auctions.yahooapis.jp"
 	defaultUserAgent  = "Yahoo AppID: "
 	apiRequestTimeout = 30 * time.Second
 )
@@ -27,13 +28,19 @@ func init() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 }
 
-// NewClient returns new yahoo.Client
-func NewClient(appid string) *Client {
-	u, _ := url.Parse(defaultBaseURL)
+// NewShopping returns new yahoo shopping Client
+func NewShopping(appid string) *Client {
+	u, _ := url.Parse(shoppingBaseURL)
 	return &Client{u, appid, false, defaultUserAgent + appid}
 }
 
-// NewClientWithOptions returns new yahoo.Client
+// NewAuction returns new yahoo auction client
+func NewAuction(appid string) *Client {
+	u, _ := url.Parse(auctionBaseURL)
+	return &Client{u, appid, false, defaultUserAgent + appid}
+}
+
+// NewClientWithOptions returns new yahoo client
 func NewClientWithOptions(appid string, rawurl string, verbose bool) (*Client, error) {
 	u, err := url.Parse(rawurl)
 	if err != nil {
